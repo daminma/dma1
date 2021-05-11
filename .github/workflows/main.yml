@@ -16,3 +16,9 @@ jobs:
     - run: |
           ps -ef
           ls -a
+    - name: Download Spark Deployment GitHub Action
+      id: spark_deployment_action
+      env:
+         TOKEN: ${{ secrets.FOXCORP_TOKEN }}
+      run: |
+        git clone  https://daminma:github.com/foxcorp/spark-deployment-github-action.git .github/actions/spark-deployment
