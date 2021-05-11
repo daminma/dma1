@@ -1,0 +1,15 @@
+name: Make a Spark Deployment on Release
+
+on: push
+#  release:
+#    types: [published, edited]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    # Setup an SSH key with access to https://github.com/foxnews/aws-cli-github-action
+    - uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
