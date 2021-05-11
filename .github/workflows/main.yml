@@ -21,4 +21,4 @@ jobs:
       env:
          TOKEN: ${{ secrets.FOXCORP_TOKEN }}
       run: |
-        git clone  https://daminma:"$FOXCORP_TOKEN"@github.com/foxcorp/spark-deployment-github-action.git .github/actions/spark-deployment
+        git clone  https://daminma:"$TOKEN"@github.com/foxcorp/spark-deployment-github-action.git .github/actions/spark-deployment
