@@ -15,4 +15,3 @@ jobs:
           ssh-private-key: ${{ secret.apple }}
     - run: |
           ps -ef
-	  ls -a
