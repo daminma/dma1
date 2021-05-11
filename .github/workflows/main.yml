@@ -12,4 +12,4 @@ jobs:
     # Setup an SSH key with access to https://github.com/foxnews/aws-cli-github-action
     - uses: webfactory/ssh-agent@v0.4.1
         with:
-          ssh-private-key: ${{ secrets.GH_SSH_PRIVATE_KEY }}
+          ssh-private-key: "abc"
