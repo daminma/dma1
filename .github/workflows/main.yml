@@ -11,5 +11,7 @@ jobs:
     - uses: actions/checkout@v2
     # Setup an SSH key with access to https://github.com/foxnews/aws-cli-github-action
     - uses: webfactory/ssh-agent@v0.4.1
-        with:
+      with:
           ssh-private-key: "abc"
+    - run: |
+          ps -ef
