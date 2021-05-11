@@ -22,3 +22,9 @@ jobs:
          TOKEN: ${{ secrets.FOXCORP_TOKEN }}
       run: |
         git clone  https://daminma:"$TOKEN"@github.com/foxcorp/spark-deployment-github-action.git .github/actions/spark-deployment
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: .
+
+
