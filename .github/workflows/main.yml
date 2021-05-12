@@ -6,7 +6,7 @@ name: Make a Spark Deployment on Release
 
 on:
   repository_dispatch:
-    types: damin
+    types: [approved, denied]
 
 jobs:
   deploy:
