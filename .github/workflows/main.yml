@@ -14,11 +14,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     # Setup an SSH key with access to https://github.com/foxnews/aws-cli-github-action
+
+
+    - name: Dump Github context
+      env:
+         GITHUP_CONTEXT: ${{ toJSON(github) }}
+      run: echo "$GITHUB_CONTEXT"
+
+
 #    - uses: webfactory/ssh-agent@v0.4.1
 #      with:
 #          ssh-private-key: ${{ secrets.APPLE }}
     - run: |
-          ps -ef
           ls -a
 
 # use the following to download the spark-deployment action into this repo
