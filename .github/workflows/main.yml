@@ -20,6 +20,9 @@ jobs:
       env:
          GITHUP_CONTEXT: ${{ toJSON(github) }}
       run: echo "$GITHUB_CONTEXT"
+    - run: 'echo "approved: ${{ github.event.client_payload.approved }}"'
+    - run: 'echo "payload: ${{ toJson(github.event.client_payload) }}"'
+    - run: echo baz
 
 
 #    - uses: webfactory/ssh-agent@v0.4.1
